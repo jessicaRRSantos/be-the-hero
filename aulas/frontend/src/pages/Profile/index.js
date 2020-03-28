@@ -14,7 +14,7 @@ export default function Profile() {
     const history = useHistory();
 
     const ongId = localStorage.getItem('ongId');
-    const ongname = localStorage.getItem('ongName');
+    const ongName = localStorage.getItem('ongName');
 
     useEffect(() => {
         api.get('profile', {
@@ -49,7 +49,7 @@ export default function Profile() {
         <div className="profile-container">
             <header>
                 <img src={logoImg} alt="Be The Hero" />
-                <span>Bem vinda, {ongname}</span>
+                <span>Bem vinda, {ongName}</span>
 
                 <Link className="button" to="/incidents/new">Cadastrar novo caso</Link>
                 <button onClick={handleLogout} type="button">
